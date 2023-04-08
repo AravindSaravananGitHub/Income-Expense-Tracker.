@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+    font-size: 8.5px;
+}
+
+body{
+    width:100vw;
+    height: 100vh;
+    background-color:#a4b0be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    position: relative;
+}
+.container{
+    width:32rem;
+    min-height: 55rem;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: rgba(0,0,0,0.15) 1.95px 1.95px 2.6px;
+    position: absolute;
+    top:8%;
+}
+.leger{
+    width: 100%;
+    height: 100%;
+    background-color: #2f3542;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 7px 7px 0 0 ;
+}
+.leger h2{
+    text-transform: uppercase;
+    color:#fff200;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 4px;
+}
+.leger h4{
+    font-weight: 300;
+    padding: 4px;
+}
+.leger h1{
+    font-weight: 600;
+    margin-bottom: 1px;
+    padding: 4px;
+}
+.inc-exp-container{
+    display: flex;
+    padding: 5px;
+    gap:10px;
+}
+.inc-exp-container div{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    flex: 1;
+}
+.inc-exp-container div.p{
+    font-size: 20px;
+}
+.inc-exp-container div.inc{
+    border: 3px solid #3ae374;
+    color: #3ae374;
+    border-radius: 5px;
+}
+.inc-exp-container div.exp{
+    border: 3px solid #ff3838;
+    color: #ff3838;
+    border-radius: 5px;
+}
+#form{
+    padding:5px;
+    margin-top: 15px;
+}
+.form-control{
+    margin-top: 4px;
+}
+label{
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"]{
+    border: 1px solid #dedede;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+}
+.btn{
+    background-color: #7158e2;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 3px;
+    user-select: none;
+}
+.btn:active{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.transaction{
+    padding: 10px;
+    min-width: 20px;
+}
+.transaction h3{
+    text-transform: uppercase;
+    margin: 0.8rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+.trans{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.trans li{
+    background-color: #f1f2f6;
+    color: #1b1a1a;
+    box-shadow: rgba(0,0,0,0.02)0px 1px 3px 0px , rgba(27,35,0.15) 0px 0px 1px;
+    padding: 1rem;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.trans li.inc{
+    border-left: 5px solid #3ae374;
+}
+.trans li.exp{
+    border-left: 5px solid #ff3838;
+}
+.btn-del{
+    position: absolute;
+    top:-7px;
+    right: -7px;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    font-weight: 500;
+    color: aliceblue;
+    background-color: #ff3838;
+    border: none;
+    cursor: pointer;
+}
+footer .space{
+    width:100vw;
+    height: 150px;
+    top:0;
+    bottom: 0;
+    background-color:#a4b0be;
+    border: none;
+}
+.prime{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 70;
+}
+.prime .hole{
+    height: 15px;
+    width: 15px;
+    background-color:#a4b0be;
+    border-radius: 50%;
+}
+
+@media (min-width:662px) {
+
+    body{
+        display: grid;
+        place-items: center;
+    }
+    footer .space{
+        display: none;
+    }
+    .prime{
+        display: none;
+    }
+    .prime .hole{
+        display: none;
+    }
+    .container{
+        display: flex;
+        min-width: 65rem;
+        min-height:52rem;
+        flex-direction: row;
+    }
+    .leger{
+        flex:1;
+        border-radius: 5px 0 0 5px;
+        max-height:52rem;
+    }
+    .transaction{
+        flex: 1;
+        background-color: #ffffff;
+        border-radius: 0 5px 5px 0;
+        overflow-y: scroll;
+        max-height:52rem;
+    }
+    .btn-del{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .trans li:hover .btn-del{
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #dedede;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(88, 77, 255);
+    border-radius: 2px;
+}

@@ -39,7 +39,7 @@ function loadTransactionDetail(transaction){
 }
 
 function removeTrans(id){
-    if(confirm("Are you sure you want to delete Transcation from Aravind's Database?")){
+    if(confirm("Are you sure you want to delete Transaction from Aravind's Database?")){
         transactions=transactions.filter((transaction)=>transaction.id!=id);
         updateLocalStorage();
         config();
